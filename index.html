@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Hub - Центр Инновационных технологий</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3a86ff',
+                        secondary: '#8338ec'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #3a86ff 0%, #8338ec 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white overflow-x-hidden">
+    <div id="vanta-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-card mx-4 md:mx-10 mt-4 p-4 rounded-full">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="cpu" class="text-primary"></i>
+                <span class="text-xl font-bold">TechNova Hub</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-primary transition">Главная</a>
+                <a href="#" class="hover:text-primary transition">Технологии</a>
+                <a href="#" class="hover:text-primary transition">Проекты</a>
+                <a href="#" class="hover:text-primary transition">Команда</a>
+                <a href="#" class="hover:text-primary transition">Контакты</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 md:px-10 py-20 md:py-32 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <span class="text-gradient">Центр Инновационных Технологий</span>
+        </h1>
+        <p class="text-xl md:text-2xl max-w-2xl mb-10 opacity-90">
+            Создаём будущее сегодня. Разрабатываем инновационные решения для сложных задач.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <button class="px-8 py-3 bg-primary rounded-full font-medium hover:bg-opacity-90 transition">
+                Начать проект
+            </button>
+            <button class="px-8 py-3 bg-transparent border-2 border-white rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                Узнать больше
+            </button>
+        </div>
+        <div class="mt-20">
+            <i data-feather="chevron-down" class="animate-bounce text-primary w-10 h-10"></i>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="container mx-auto px-4 md:px-10 py-20">
+        <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">Наши <span class="text-gradient">Технологии</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tech Card 1 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="cloud" class="text-primary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Облачные решения</h3>
+                <p class="opacity-80">Масштабируемые облачные платформы для бизнеса любого уровня.</p>
+            </div>
+            
+            <!-- Tech Card 2 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-secondary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="code" class="text-secondary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Искусственный интеллект</h3>
+                <p class="opacity-80">Передовые алгоритмы машинного обучения для автоматизации процессов.</p>
+            </div>
+            
+            <!-- Tech Card 3 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="shield" class="text-primary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Кибербезопасность</h3>
+                <p class="opacity-80">Комплексная защита данных и цифровых активов вашего бизнеса.</p>
+            </div>
+            
+            <!-- Tech Card 4 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-secondary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="database" class="text-secondary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Big Data</h3>
+                <p class="opacity-80">Анализ больших данных для принятия стратегических решений.</p>
+            </div>
+            
+            <!-- Tech Card 5 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="smartphone" class="text-primary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Мобильные технологии</h3>
+                <p class="opacity-80">Инновационные мобильные решения для современного бизнеса.</p>
+            </div>
+            
+            <!-- Tech Card 6 -->
+            <div class="glass-card p-8 rounded-2xl hover:translate-y-[-10px] transition duration-300">
+                <div class="w-16 h-16 bg-secondary bg-opacity-20 rounded-xl flex items-center justify-center mb-6">
+                    <i data-feather="wifi" class="text-secondary w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">IoT решения</h3>
+                <p class="opacity-80">Интернет вещей для автоматизации и контроля процессов в реальном времени.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-4 md:px-10 py-20">
+        <div class="glass-card p-8 md:p-16 rounded-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы к цифровой трансформации?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto opacity-90">Свяжитесь с нами сегодня и узнайте, как мы можем помочь вашему бизнесу.</p>
+            <button class="px-8 py-3 bg-primary rounded-full font-medium hover:bg-opacity-90 transition">
+                Связаться с нами
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 md:px-10 py-10 border-t border-gray-800 mt-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <i data-feather="cpu" class="text-primary"></i>
+                    <span class="text-xl font-bold">TechNova Hub</span>
+                </div>
+                <p class="opacity-80">Центр инновационных технологий для будущего.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Компания</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">О нас</a></li>
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">Карьера</a></li>
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">Блог</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Решения</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">Предприятия</a></li>
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">Стартапы</a></li>
+                    <li><a href="#" class="opacity-80 hover:text-primary transition">Государство</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-4">Контакты</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <i data-feather="mail" class="w-4 h-4"></i>
+                        <span class="opacity-80">info@technovahub.com</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i data-feather="phone" class="w-4 h-4"></i>
+                        <span class="opacity-80">+996 224 275 317 </span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i data-feather="map-pin" class="w-4 h-4"></i>
+                        <span class="opacity-80">г. Бишкек, проспект Ч. Айтматова, 66, КГТУ им. И. Раззакова</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+            <p class="opacity-80">© 2023 TechNova Hub. Все права защищены.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="opacity-80 hover:text-primary transition">
+                    <i data-feather="facebook"></i>
+                </a>
+                <a href="#" class="opacity-80 hover:text-primary transition">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="opacity-80 hover:text-primary transition">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="opacity-80 hover:text-primary transition">
+                    <i data-feather="instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3a86ff,
+            backgroundColor: 0x111827,
+            size: 0.8
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
